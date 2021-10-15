@@ -4,7 +4,7 @@ from game.jumper import Jumper
 
 class Director:
     
-    """A code template for a person who directs the game. The responsibility of 
+    """A code template for a person who directs the game. The responsibility of
     this class of objects is to control the sequence of play.
     
     Stereotype:
@@ -24,8 +24,8 @@ class Director:
             self (Director): an instance of Director.
         """
         self.console = Console()
-        self.seeker = Seeker()
-        self.hider = Hider()
+        self.guesser = Guesser()
+        self.jumper = Jumper()
         self.keep_playing = True
         
         
@@ -43,7 +43,7 @@ class Director:
     def do_outputs(self):
         """Outputs the important game information for each round of play. 
         gets the current state of the parachute from the JUMPER CLASS
-        tells the CONSOLE to print it 
+        tells the CONSOLE to print it
 
         Args:
             self (Director): An instance of Director.
