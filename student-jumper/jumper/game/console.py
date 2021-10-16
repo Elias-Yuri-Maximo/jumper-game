@@ -42,7 +42,7 @@ class Console:
         while True:
 
             # input is immediately upper-cased to create a consistent style
-            letter_guess = input("Guess the letter [a-z]: ").upper()
+            letter_guess = input("Guess the letter [a-z]: ")
 
             # Input must be exactly one alphabetical character
             if letter_guess.isalpha() and len(letter_guess) == 1:
@@ -52,4 +52,7 @@ class Console:
                 continue
         
         return letter_guess
+
+    def write(self, word):
+        print(*word)
 
