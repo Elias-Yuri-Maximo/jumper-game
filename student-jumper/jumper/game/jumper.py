@@ -1,4 +1,4 @@
-from _typeshed import Self
+
 
 
 class Jumper:
@@ -44,6 +44,8 @@ class Jumper:
         if result is False it will delete part of the parachute, 
         if it is True things stay the same. 
         '''
+
+        #print(state)
         if state:
             self.parachute = self.parachute
         else:

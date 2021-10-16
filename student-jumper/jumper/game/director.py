@@ -52,7 +52,7 @@ class Director:
         current_parachute = self.jumper.get_parachute()
 
         #Telss the console class to print current parachute
-        self.console.write(current_parachute)
+        self.console.draw_parachute(current_parachute)
 
 
 
@@ -67,7 +67,7 @@ class Director:
         """
 
         # tells the class console to print the message "Enter a letter [a-z]: "
-        letter = self.console.read_letter("Enter a letter [a-z]: ")
+        letter = self.console.read_letter()
 
        
         #sends the letter to be evaluated by the class guesser.
@@ -98,6 +98,16 @@ class Director:
         #Checks if possible to play still.
         # Keep_playing = false if not able 
         # Keep_playing = true if able 
-        self.keep_playing = check_parachute()
 
-        self.keep_playing = check_word()
+        keep_playing_check_word = self.guesser.check_word()
+        keep_playing_check_parachute = self.jumper.check_parachute()
+
+        if (keep_playing_check_parachute == True) and (keep_playing_check_word == True):
+            pass
+            
+        else:
+            
+            self.keep_playing = False
+
+        if keep_playing_check_parachute == False:
+            self.console.draw_parachute(self.jumper.get_parachute())
