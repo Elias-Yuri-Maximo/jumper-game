@@ -1,10 +1,8 @@
+
 import random
 
-
-
-  
-'''
-
+class Guesser: 
+    '''
     This class will need to have a method: 
 
     update_word( ) that takes letter as a parameter. 
@@ -16,28 +14,17 @@ import random
     check_word() checks if the word is complete, if it is print a small win message. 
     also, return a True boolean value if can still play and a False if game over.
     
-
     '''
 
-    
-
-class Guesser:
-    """
-    The class constructor.
-    Args:
-    self (Guesser): an instance of Guesser.
-    """
     def __init__(self):
         self.word_list = ("loves", "byuid", "crazy", "idaho", "cleat",  "types")
         self.current_list = ["_","_","_","_","_"]
-
         # self.letter_list = []
         self.generated_word = random.choice(self.word_list)
         self.letter_list = list(self.generated_word)
         self.guessed_letter = ""
 
-
-       print(self.generated_word)
+        print(self.generated_word)
 
     def update_word(self, guessed_letter):
         #debug print(guessed_letter)
@@ -57,13 +44,14 @@ class Guesser:
             else:
                 if self.current_list[letter_index] == "":  
                     self.current_list[letter_index] = "_" 
-                    
             letter_index += 1
 
         
         return result
 
         
+                
+
 
     def get_word(self): 
         return self.current_list   
@@ -72,10 +60,9 @@ class Guesser:
         # check if word is complete return false
         # if word is not complete return true
         if self.current_list == self.letter_list:
-
-
             print('Congratulations!') 
             return False
+            
             
         else:
             return True
