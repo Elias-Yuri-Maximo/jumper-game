@@ -34,5 +34,7 @@ root                    (project root folder)
 
 ## Authors
 ---
-* TODO: Elias Maximo - eliasmaximus@gmail.com
+* TODO: Elias Maximo - eliasmaximus@gmail.com 
 Layne Howell 10/14/21 4:48 PST Contributed Guesser class with much help from the team!
+Nicolas Pariente
+Noah Nielsen 
